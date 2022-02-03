@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+VERSION := $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
+
+%:
+	dh $@ --with dkms,modaliases
+
+override_dh_install:
+	dh_install ate chips common conf doc eeprom include mac mcu mgmt os phy rate_ctrl sta tx_rx Makefile usr/src/netgear-a6210-$(VERSION)/
+	dh_install RT2870AP.dat RT2870APCard.dat RT2870STA.dat RT2870STACard.dat etc/Wireless/RT2870STA/
+	find debian/netgear-a6210-dkms/usr/src/netgear-a6210-$(VERSION) -type f -exec chmod 644 {} \;
+
+override_dh_dkms:
+	dh_dkms -V $(VERSION)
+
+override_dh_auto_configure override_dh_auto_build override_dh_auto_test override_dh_auto_install override_dh_auto_c:

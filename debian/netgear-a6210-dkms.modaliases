@@ -1,0 +1,8 @@
+alias usb:v0846p9014d*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v0B05p180Bd*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v0846p9053d*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v0B05p17EBd*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v045Ep02E6d*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v0E8Dp7612d*dc*dsc*dp*ic*isc*ip*in* mt7662u_sta
+alias usb:v0E8Dp7632d*dc*dsc*dp*icFFiscFFipFFin* mt7662u_sta
+alias usb:v0E8Dp7662d*dc*dsc*dp*icFFiscFFipFFin* mt7662u_sta

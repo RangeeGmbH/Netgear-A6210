@@ -1,0 +1,10 @@
+PACKAGE_NAME="netgear-a6210"
+PACKAGE_VERSION="#MODULE_VERSION#"
+MAKE="make KERNELRELEASE=${kernelver} LINUX_SRC=/lib/modules/${kernelver}/build release"
+CLEAN="make clean"
+REMAKE_INITRD="yes"
+AUTOINSTALL="yes"
+
+BUILT_MODULE_NAME[0]="mt7662u_sta"
+BUILT_MODULE_LOCATION[0]="os/linux/"
+DEST_MODULE_LOCATION[0]="/updates/dkms"

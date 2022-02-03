@@ -36,8 +36,8 @@ PLATFORM = PC
 
 MAKE = make
 
-KERNELRELEASE = $(shell uname -r)
-LINUX_SRC = /lib/modules/$(KERNELRELEASE)/build
+KERNELRELEASE ?= $(shell uname -r)
+LINUX_SRC ?= /lib/modules/$(KERNELRELEASE)/build
 LINUX_SRC_MODULE = /lib/modules/$(KERNELRELEASE)/kernel/drivers/net/wireless/
 CROSS_COMPILE =
 
